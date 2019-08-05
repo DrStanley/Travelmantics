@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Travelmantics</string>
+    <string name="welcome_to">Welcome To</string>
+    <string name="register">SignUp</string>
+    <string name="login">Login</string>
+    <string name="login_to">Login To</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="image">Image</string>
+    <string name="name">Full Name</string>
+    <string name="email">Email</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="comfirm_password">Comfirm Password</string>
+    <string name="done">Done</string>
+    <string name="edit">Edit</string>
+    <string name="Reset">reset</string>
+    <string name="password_reset">Password Reset</string>
+    <string name="logout">Logout</string>
+    <string name="settings">Settings</string>
+    <string name="exist">Exit</string>
+    <string name="action_settings">Settings</string>
+    <string name="travelmantics">Travelmantics</string>
+    <string name="save">Save</string>
+    <string name="new_travel_deal">New travel Deal</string>
+    <string name="delete">Delete</string>
+</resources>
