@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    tools:context="com.stanleyj.android.travelmantics.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/wel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="@string/login_to"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="@string/travelmantics"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+            android:textColor="#1e405a"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/usn"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:drawablePadding="10dp"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+            android:textColor="#3e4ba6"
+            app:met_floatingLabel="normal" />
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/lpwd"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_lock_black_24dp"
+            android:drawablePadding="10dp"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+            android:textColor="#3e4ba6"
+            app:met_floatingLabel="normal"
+            app:met_minCharacters="6" />
+
+        <Button
+            android:id="@+id/log"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/editsat"
+            android:fontFamily="serif"
+            android:padding="10dp"
+            android:text="@string/login"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/f_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"
+            android:fontFamily="monospace"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:text="@string/forgot_password"
+            android:textAlignment="textEnd"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/regAct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="10dp"
+            android:fontFamily="serif"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:text="@string/register"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+            android:textColor="#3e4ba6"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>
