@@ -87,7 +87,7 @@ public class DealActivity extends AppCompatActivity {
                         }
                         try {
                             viewHolder.setDetail(DealActivity.this, model.getTitle(), model.getDescription(),
-                                    model.getImage(),model.itemID, model.getPrice());
+                                    model.getImage(),model.getItemID(), model.getPrice());
                             pd.dismiss();
                         } catch (FirebaseException e) {
 
@@ -113,6 +113,7 @@ public class DealActivity extends AppCompatActivity {
                             @Override
                             public void onItemClick(View view, int position) {
                                 TextView proid = (TextView) view.findViewById(R.id.item);
+
                                 //getting data from views
                                 Intent intent = new Intent(view.getContext(), AddnewActivity.class);
                                 intent.putExtra("prodid", proid.getText().toString());

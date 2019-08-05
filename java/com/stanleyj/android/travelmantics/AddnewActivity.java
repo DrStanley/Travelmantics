@@ -78,14 +78,17 @@ public class AddnewActivity extends AppCompatActivity {
         //        getting Extras from intent
         pid = getIntent().getStringExtra("prodid");
         check = getIntent().getBooleanExtra("check", false);
+        Toast.makeText(AddnewActivity.this," hmm "+pid, Toast.LENGTH_SHORT).show();
 
         if (check) {
-            firebaseDatabase2 = FirebaseDatabase.getInstance();
-            databaseReference2 = firebaseDatabase.getReference("Places").child(pid);
+         try {
+             firebaseDatabase2 = FirebaseDatabase.getInstance();
+
+            databaseReference2 = firebaseDatabase2.getReference("Places").child(pid);
             pd.setMessage(" Loading Data Please wait...");
             pd.setCanceledOnTouchOutside(false);
             pd.show();
-            databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            databaseReference2.addListenerForSingleValueEvent(new ValueEventListener() {
 
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -111,7 +114,20 @@ public class AddnewActivity extends AppCompatActivity {
 
                 }
             });
-
+         } catch (Exception e){
+             AlertDialog alertDialog = new AlertDialog.Builder(AddnewActivity.this).create();
+             alertDialog.setTitle("Alert");
+             alertDialog.setIcon(R.drawable.ic_error_outline_black_24dp);
+             alertDialog.setMessage("Error Uploading" + e.getMessage() + "\n" + e.getCause());
+             alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                     new DialogInterface.OnClickListener() {
+                         public void onClick(DialogInterface dialog, int which) {
+                             dialog.dismiss();
+                             pd.dismiss();
+                         }
+                     });
+             alertDialog.show();
+         }
         }
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
